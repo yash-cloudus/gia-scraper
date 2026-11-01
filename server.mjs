@@ -18,7 +18,7 @@ import { createServer } from 'node:http'
 import { fileURLToPath } from 'node:url'
 import { chromium, errors } from 'playwright'
 
-const PORT = Number(process.env.PORT ?? 4100)
+const PORT = Number(process.env.PORT ?? 10000)
 const HOST = process.env.HOST ?? '127.0.0.1'
 const TOKEN = process.env.GIA_SCRAPER_TOKEN ?? ''
 const MAX_AT_ONCE = 2
@@ -200,7 +200,7 @@ createServer(async (req, res) => {
     console.error(e)
     send(res, 502, { error: 'GIA search failed. Try again.' })
   }
-}).listen(PORT, HOST, () => console.log(`GIA lookup service on http://${HOST}:${PORT}/gia?reportNo=`))
+}).listen(PORT, HOST, () => console.log(`GIA lookup service listening on ${HOST}:${PORT}`))
 
 // Chrome open and GIA's token in hand before the first search, not during it.
 getChrome()
