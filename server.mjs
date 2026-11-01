@@ -7,7 +7,7 @@
  * The ERP's `/api/gia` (src/app/api/gia/route.ts) calls it.
  *
  *   cd gia-scraper && npm install && npm start
- *   GET /gia?reportNo=6202161437   (Authorization: Bearer <GIA_SCRAPER_TOKEN>)
+ *   GET /gia?reportNo=6202161437
  *   -> 200 GIA's JSON minus "labels" | 400 | 401 | 404 / 504 / 502 { error }
  *
  * Env: PORT (4100), HOST (127.0.0.1 - set 0.0.0.0 to serve other machines,
