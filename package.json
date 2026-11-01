@@ -1,0 +1,14 @@
+{
+  "name": "gia-scraper",
+  "private": true,
+  "description": "GIA Report Check lookup for the Diamond ERP - runs on a machine with Google Chrome and a desktop session, not on Vercel/Hostinger.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.64.1"
+  }
+}

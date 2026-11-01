@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: diamond-gia-scraper
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /gia?reportNo=6202161437
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: GIA_SCRAPER_TOKEN
+        generateValue: true
